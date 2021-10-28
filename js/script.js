@@ -37,8 +37,8 @@ const STOCK_ICONS = [
 
 const CSS_ICONS = [
   [
-    "../img/css_doc.png",
-    "../img/css_mario.png",
+    "./img/css_doc.png",
+    "img/css_mario.png",
     "../img/css_luigi.png",
     "../img/css_bowser.png",
     "../img/css_peach.png",
