@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}"/>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="shortcut icon" href="./favicon.ico">
     <title>SSBM RNG Manip</title>
 </head>
 <body>
@@ -17,17 +17,17 @@
         <div id="item-selector">
             <label>
                 <input type="radio" name="item" value="beamsword" checked>
-                <img src="/static/img/beamsword.png">
+                <img src="./img/beamsword.png">
             </label>
             
             <label>
                 <input type="radio" name="item" value="bomb">
-                <img src="/static/img/bobomb.png">
+                <img src="./img/bobomb.png">
             </label>
 
             <label>
                 <input type="radio" name="item" value="saturn">
-                <img src="/static/img/saturn.png">
+                <img src="./img/saturn.png">
             </label>
         </div>
         <div id="conditions-container">
@@ -67,5 +67,5 @@
     </div>
 </body>
 
-<script src="{{url_for('static', filename='js/script.js')}}" type="module"></script>
+<script src="js/script.js" type="module"></script>
 </html>
