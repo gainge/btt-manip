@@ -3,6 +3,9 @@ import { MANIP_ACTIONS, STAGE_LOAD_ACTION, buildActionSequence } from './rolls.j
 import { EVENT_SEARCH_MAX_ITERATIONS, searchForEvent, buildCharacterEvents, buildPullEventList } from './event.js';
 
 
+const SERVER = '';
+const PORT = '';
+
 /* Constants */
 const STOCK_ICONS = [
 	"../img/DrMarioBlack.png",
@@ -334,7 +337,7 @@ function searchForNewSeed() {
   console.log("I'm a searchin'!");
 
   // Build the URL I guess lol
-  let url = '/seed';
+  let url = `${SERVER}:${PORT}/seed`;
   let arraySpecifier = 'seq[]';
 
   for (let i = 0; i < charSeq.length; i++) {
