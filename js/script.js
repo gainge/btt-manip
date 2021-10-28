@@ -349,6 +349,10 @@ function searchForNewSeed() {
 
   fetch(url)
       .then(function (response) {
+        if (!response.ok) {
+          throw new Error(`Status Code: ${response.status} `);
+        }
+        console.log(response);
         return response.json();
       }).then(function (result) {
         clearResults();
@@ -356,6 +360,7 @@ function searchForNewSeed() {
 
         processSeed(seed);
       }).catch(function(error) {
+        alert(`Error Executing Search. ${error}`);
         console.log("Fetch error: " + error);
       });
 
