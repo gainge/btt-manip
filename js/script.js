@@ -3,8 +3,8 @@ import { MANIP_ACTIONS, STAGE_LOAD_ACTION, buildActionSequence } from './rolls.j
 import { EVENT_SEARCH_MAX_ITERATIONS, searchForEvent, buildCharacterEvents, buildPullEventList } from './event.js';
 
 
-const SERVER = '';
-const PORT = '';
+const SERVER = '134.209.63.115';
+const PORT = '5000';
 
 /* Constants */
 const STOCK_ICONS = [
