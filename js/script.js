@@ -1,4 +1,4 @@
-import { findSeedDifference, formatHex, rngAdv, rngInt } from './util.js';
+import { findSeedDifference, formatHex, isInt, rngAdv, rngInt } from './util.js';
 import { MANIP_ACTIONS, STAGE_LOAD_ACTION, buildActionSequence } from './rolls.js';
 import { EVENT_SEARCH_MAX_ITERATIONS, searchForEvent, buildCharacterEvents, buildPullEventList } from './event.js';
 
@@ -361,14 +361,18 @@ function searchForNewSeed() {
         clearResults();
         let seed = result.seed
 
-        processSeed(seed);
+        // Check that seed, dog
+        if (!isInt(seed)) {
+          alert(`Error processing seed: ${seed}`)
+        } else {
+          processSeed(seed);
+        }
       }).catch(function(error) {
         alert(`Error Executing Search. ${error}`);
         console.log("Fetch error: " + error);
       });
 
 }
-
 
 
 
